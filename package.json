@@ -1,5 +1,10 @@
 {
   "name": "react-ts-template",
+  "author": {
+    "email": "kavinthanesjesdapong@gmail.com",
+    "name": "kavin thanesjesdapong",
+    "url": "https://github.com/kthanesjesdapong/react-ts-template"
+  },
   "private": true,
   "version": "0.0.0",
   "type": "module",

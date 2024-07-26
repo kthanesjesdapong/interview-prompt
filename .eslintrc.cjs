@@ -29,15 +29,15 @@ module.exports = {
     ],
     'react/no-danger': true,
     'react/no-unstable-nested-components': 'error',
-    //"react/jsx-max-depth": ["error", { max: 5 }],
-    //react/function-component-definition": [
-    //"warn",
-    //{ namedComponents: "arrow-function" },
-    //],
-    // "react/no-children-prop": true
-    // 'react/no-unused-prop-types': true,
+    'react/prefer-read-only-props': true,
+    'react/jsx-no-bind': true,
+    'react/no-children-prop': true,
+    'react/no-unused-prop-types': true,
+    'react/jsx-max-depth': ['error', { max: 5 }],
+    'react/function-component-definition': [
+      'warn',
+      { namedComponents: 'arrow-function' },
+    ],
     // "react/display-name": true,
-    // 'react/jsx-no-bind': true,
-    // 'react/prefer-read-only-props': true,
   },
 };
