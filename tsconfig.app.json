@@ -10,6 +10,7 @@
       "@ui/*": ["./src/shared/ui/*"],
       "@api": ["./src/shared/api"],
       "@lib/*": ["./src/shared/lib/*"],
+      "@hooks": ["./src/shared/hooks"],
       "@utils/*": ["./src/shared/utils/*"]
     },
     "composite": true,
