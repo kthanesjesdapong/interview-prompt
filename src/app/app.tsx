@@ -1,9 +1,9 @@
-import { Header } from '@components/header';
+import { ProductPage } from '@pages/product-page';
 
 export const App = () => {
   return (
     <>
-      <Header />
+      <ProductPage />
     </>
   );
 };
