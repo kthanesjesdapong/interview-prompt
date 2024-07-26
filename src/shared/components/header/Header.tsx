@@ -1,11 +1,11 @@
-export const Header = () => {
+import { ReactNode } from 'react';
+
+type HeaderProps = {
+  children: ReactNode;
+};
+
+export const Header = ({ children }: HeaderProps) => {
   return (
-    <nav className='absolute border w-full text-end p-[10px]'>
-      <a
-        href={'/'}
-        className='p-2 rounded-lg transition-opacity hover:opacity-85 bg-blue-500 text-white space-x-2'>
-        Products
-      </a>
-    </nav>
+    <nav className='absolute border w-full text-end p-[10px]'>{children}</nav>
   );
 };
