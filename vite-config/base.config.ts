@@ -21,6 +21,7 @@ export default (({ mode }: { mode: UserConfig['mode']; }) => {
         '@ui': resolve(__dirname, '../src/shared/ui'),
         '@api': resolve(__dirname, '../src/shared/api'),
         '@lib': resolve(__dirname, '../src/shared/lib'),
+        '@hooks': resolve(__dirname, '../src/shared/hooks'),
         '@utils': resolve(__dirname, '../src/shared/utils')
       }
     }

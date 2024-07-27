@@ -11,9 +11,10 @@ export const ProductItem = ({ product }: ProductItemProps) => {
 
   return (
     <div
-      className='flex flex-col items-center cursor-pointer my-4'
-      onClick={() => setActiveProduct(product)}>
-      <p className='text-sm'>{product.title}</p>
+      className="my-4 flex cursor-pointer flex-col items-center"
+      onClick={() => setActiveProduct(product)}
+    >
+      <p className="text-sm">{product.title}</p>
       <img src={product.thumbnail} />
     </div>
   );

@@ -1,6 +1,6 @@
-import { useQuery } from "@tanstack/react-query";
-import { api, TProduct, ProductDataRes } from "@api";
-import { API_URL } from "../configs";
+import { useQuery } from '@tanstack/react-query';
+import { api, TProduct, ProductDataRes } from '@api';
+import { API_URL } from '../configs';
 
 export const getProducts = async () => {
   try {
@@ -12,17 +12,26 @@ export const getProducts = async () => {
   }
 };
 
+//Can Move this into it's own file, if you had a query that needed to be re-used across App
+//You can create a helper to get you QueryOpts W/ queryOptions({queryKey, queryFn})
 export const useGetProducts = (): TProduct[] => {
-
-  const { data: productsData, isLoading, isError, isSuccess } = useQuery({
+  const {
+    data: productsData,
+    isLoading,
+    isError,
+    isSuccess,
+  } = useQuery({
     queryKey: ['getProducts'],
-    queryFn: () => getProducts()
+    queryFn: () => getProducts(),
   });
 
-  if (!productsData || isError || isSuccess && !isLoading && productsData && !productsData.products) {
+  if (
+    !productsData ||
+    isError ||
+    (isSuccess && !isLoading && productsData && !productsData.products)
+  ) {
     return [];
   }
 
   return productsData.products;
-
 };

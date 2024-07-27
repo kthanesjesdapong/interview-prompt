@@ -10,22 +10,21 @@ import {
   Product,
 } from '@features/product';
 
-type ProductPageProps = {};
-
-export const ProductPage = ({}: ProductPageProps) => {
+export const ProductPage = () => {
   const productList = useGetProducts();
   const [activeProduct, setActiveProduct] = useState<TProduct>();
 
   return (
     <ProductContextProvider
       activeProduct={activeProduct}
-      setActiveProduct={setActiveProduct}>
-      <div className='p-0'>
+      setActiveProduct={setActiveProduct}
+    >
+      <div className="p-0">
         {/*Top Nav*/}
         <Header>
-          <ATag href='/'>Products</ATag>
+          <ATag href="/">Products</ATag>
         </Header>
-        <main className='pt-[45px] flex'>
+        <main className="flex pt-[45px]">
           <Sidebar>
             <ProductList productList={productList} />
           </Sidebar>
