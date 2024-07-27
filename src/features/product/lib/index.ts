@@ -1,1 +1,1 @@
-export * from './filter-active-product-image';
+export * from './filter-active-product-image.ts';

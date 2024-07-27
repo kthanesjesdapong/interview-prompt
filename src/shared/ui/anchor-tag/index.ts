@@ -1,1 +1,1 @@
-export * from './ATag';
+export * from './ATag.tsx';
