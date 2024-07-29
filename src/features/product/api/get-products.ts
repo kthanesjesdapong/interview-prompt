@@ -1,11 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
 import { api, TProduct, ProductDataRes } from '@api';
+
 import { API_URL } from '../configs';
+import { validateProductsResponse } from '../lib/validate-products-res';
 
 export const getProducts = async () => {
   try {
     const data = await api.get<ProductDataRes>(API_URL);
-    return data;
+    return validateProductsResponse(data);
   } catch (e) {
     console.error(e);
     throw e;
