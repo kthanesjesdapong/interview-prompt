@@ -10,7 +10,7 @@ export const ProductSchema = z.object({
 export type TProduct = z.infer<typeof ProductSchema>;
 
 export const ProductDataResSchema = z.object({
-  limit: z.number().min(1),
+  limit: z.number(),
   products: ProductSchema.array(),
   skip: z.number(),
   total: z.number(),
